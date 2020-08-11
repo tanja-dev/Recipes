@@ -1,6 +1,59 @@
 <div class="container">
   <div class="columns is-multiline">
     <%= render @recipe, show: true %>
+
+    <ol class="column is-6 is-offset-3">
+      <% @recipe.instructions.each do |instruction| %>
+        <div class="column is-6 is-offset-3">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <li>
+                  <%= instruction.body %>
+                </li>
+              </div>
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <a class="level-item">
+                    <span class="icon is-small"><i class="fas fa-edit"></i></span>
+                  </a>
+                  <a class="level-item">
+                    <span class="icon is-small"><i class="fas fa-trash-alt"></i></span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </article>
+        </div>
+      <% end %>
+    </ol>
+
+    <ul class="column is-6 is-offset-3">
+      <% @recipe.ingredients.each do |ingredient| %>
+        <div class="column is-6 is-offset-3">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <li>
+                  <%= ingredient.body %>
+                </li>
+              </div>
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <a class="level-item">
+                    <span class="icon is-small"><i class="fas fa-edit"></i></span>
+                  </a>
+                  <a class="level-item">
+                    <span class="icon is-small"><i class="fas fa-trash-alt"></i></span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </article>
+        </div>
+      <% end %>
+    </ul>
+
   </div>
 </div>
 
