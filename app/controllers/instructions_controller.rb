@@ -15,6 +15,22 @@ class InstructionsController < ApplicationController
     end
   end
 
+  def edit
+    @instruction = Instruction.find(params[:id])
+    @recipe = @instruction.recipe
+  end
+
+  def update
+    @instruction = Instruction.find(params[:id])
+    @recipe = @instruction.recipe
+
+    if @instruction.update(instruction_params)
+      redirect_to @recipe
+    else
+      render :edit
+    end
+  end
+
   private
 
   def instruction_params

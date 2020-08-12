@@ -1,0 +1,22 @@
+<div class="column is-6 is-offset-3">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <li>
+          <%= instruction.body %>
+        </li>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <%= link_to edit_recipe_instruction_path(instruction.recipe, instruction), class:
+              "level-item" do %>
+            <span class="icon is-small"><i class="fas fa-edit"></i></span>
+          <% end %>
+          <a class="level-item">
+            <span class="icon is-small"><i class="fas fa-trash-alt"></i></span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
