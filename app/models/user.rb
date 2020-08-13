@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   before_save :email_to_downcase
 
+  has_many :recipes, dependent: :destroy
+
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }
   validates :user_name, presence: true, length: { maximum: 255 }
