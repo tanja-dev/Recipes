@@ -1,7 +1,7 @@
 <div class="container">
   <div class="columns is-multiline">
     <div class="column is-6 is-offset-3">
-      <div class="content is-size-6">
+      <div class="content is-size-3">
         <h3><%= heading %></h3>
       </div>
     </div>
@@ -29,7 +29,7 @@
           <%= form_with model: [recipe, instruction], local: true do |form| %>
             <div class="field">
               <p class="control">
-                <%= form.text_area :body, class: "textarea", placeholder: "Add a ingredient..." %>
+                <%= form.text_area :body, class: "textarea", placeholder: "Add a instruction..." %>
               </p>
             </div>
 
