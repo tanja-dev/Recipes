@@ -2,7 +2,7 @@
   <div class="card">
     <header class="card-header">
       <p class="card-header-title">
-        <%= recipe.title %>
+        <%= recipe.title %> - <%= link_to recipe.user.try(:user_name),  recipe_path(recipe) %>
       </p>
     </header>
     <div class="card-content">
